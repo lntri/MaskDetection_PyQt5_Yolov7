@@ -1,0 +1,5 @@
+train: /mnt/D20AAF4B0AAF2C03/Demo_MaskDetection_Yolov7/MaskDetection/train/images
+val: /mnt/D20AAF4B0AAF2C03/Demo_MaskDetection_Yolov7/MaskDetection/valid/images
+
+nc: 2
+names: ['with_mask', 'without_mask']

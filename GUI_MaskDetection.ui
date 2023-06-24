@@ -1,0 +1,777 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1366</width>
+    <height>768</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Mask Detection _ Phòng Lập Trình - Mạng</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>images/logo.png</normaloff>images/logo.png</iconset>
+  </property>
+  <property name="dockNestingEnabled">
+   <bool>false</bool>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>1</y>
+      <width>1371</width>
+      <height>741</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="tabImage">
+     <attribute name="title">
+      <string>Image</string>
+     </attribute>
+     <widget class="QGroupBox" name="groupInputImage">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>0</y>
+        <width>871</width>
+        <height>81</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Input</string>
+      </property>
+      <widget class="QLabel" name="lblPathImage">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>30</y>
+         <width>81</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Path to Image</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="txtPathImage">
+       <property name="geometry">
+        <rect>
+         <x>100</x>
+         <y>30</y>
+         <width>441</width>
+         <height>20</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btnBrowseImage">
+       <property name="geometry">
+        <rect>
+         <x>550</x>
+         <y>30</y>
+         <width>75</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Browse...</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btnDetectImage">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>780</x>
+         <y>30</y>
+         <width>75</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Detect</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btnResetImage">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>700</x>
+         <y>30</y>
+         <width>75</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Reset</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupOutputImage">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>90</y>
+        <width>1341</width>
+        <height>621</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Output</string>
+      </property>
+      <widget class="QGraphicsView" name="graphicsViewImage">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>20</y>
+         <width>1301</width>
+         <height>591</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="lblDisplayImageOutput">
+       <property name="geometry">
+        <rect>
+         <x>21</x>
+         <y>21</y>
+         <width>47</width>
+         <height>13</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupInputImage_2">
+      <property name="geometry">
+       <rect>
+        <x>900</x>
+        <y>0</y>
+        <width>451</width>
+        <height>81</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Infomation</string>
+      </property>
+      <widget class="QPushButton" name="btnBrowseImage_3">
+       <property name="geometry">
+        <rect>
+         <x>550</x>
+         <y>30</y>
+         <width>75</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Browse...</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btnDetectImage_3">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>780</x>
+         <y>30</y>
+         <width>75</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Detect</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btnResetImage_3">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>700</x>
+         <y>30</y>
+         <width>75</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Reset</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="lblCUDAInfoImage1">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>16</y>
+         <width>161</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>CuDNN Version: </string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="lblCUDAInfoImage2">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>36</y>
+         <width>161</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>CUDA Device Name:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="lblCUDAInfoImage3">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>56</y>
+         <width>161</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>CUDA Device Total Memory [GB]:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="lblCUDACapacityImage">
+       <property name="geometry">
+        <rect>
+         <x>190</x>
+         <y>56</y>
+         <width>291</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="lblCuDNNVersionImage">
+       <property name="geometry">
+        <rect>
+         <x>190</x>
+         <y>16</y>
+         <width>291</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="lblCUDADeviceNameImage">
+       <property name="geometry">
+        <rect>
+         <x>190</x>
+         <y>36</y>
+         <width>291</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tabVideo">
+     <attribute name="title">
+      <string>Video</string>
+     </attribute>
+     <widget class="QGroupBox" name="groupOutputVideo">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>90</y>
+        <width>1341</width>
+        <height>631</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Output</string>
+      </property>
+      <widget class="QVideoWidget" name="widgetVideoOutput" native="true">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>60</y>
+         <width>1301</width>
+         <height>521</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btnViewResult">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>20</y>
+         <width>75</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>View result</string>
+       </property>
+      </widget>
+      <widget class="QProgressBar" name="probarVideo">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>590</y>
+         <width>1301</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="value">
+        <number>0</number>
+       </property>
+       <property name="format">
+        <string>%p%</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupInputVideo">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>0</y>
+        <width>871</width>
+        <height>81</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Input</string>
+      </property>
+      <widget class="QLabel" name="lblPathVideo">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>30</y>
+         <width>81</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Path to Video</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="txtPathVideo">
+       <property name="geometry">
+        <rect>
+         <x>100</x>
+         <y>30</y>
+         <width>441</width>
+         <height>20</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btnBrowseVideo">
+       <property name="geometry">
+        <rect>
+         <x>550</x>
+         <y>30</y>
+         <width>75</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Browse...</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btnDetectVideo">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>780</x>
+         <y>30</y>
+         <width>75</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Detect</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btnResetVideo">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>700</x>
+         <y>30</y>
+         <width>75</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Reset</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupInputImage_3">
+      <property name="geometry">
+       <rect>
+        <x>900</x>
+        <y>0</y>
+        <width>451</width>
+        <height>81</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Infomation</string>
+      </property>
+      <widget class="QPushButton" name="btnBrowseImage_4">
+       <property name="geometry">
+        <rect>
+         <x>550</x>
+         <y>30</y>
+         <width>75</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Browse...</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btnDetectImage_4">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>780</x>
+         <y>30</y>
+         <width>75</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Detect</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btnResetImage_4">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>700</x>
+         <y>30</y>
+         <width>75</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Reset</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="lblCUDAInfoVideo1">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>16</y>
+         <width>161</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>CuDNN Version: </string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="lblCUDAInfoVideo2">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>36</y>
+         <width>161</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>CUDA Device Name:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="lblCUDAInfoVideo3">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>56</y>
+         <width>161</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>CUDA Device Total Memory [GB]:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="lblCUDACapacityVideo">
+       <property name="geometry">
+        <rect>
+         <x>190</x>
+         <y>56</y>
+         <width>291</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="lblCuDNNVersionVideo">
+       <property name="geometry">
+        <rect>
+         <x>190</x>
+         <y>16</y>
+         <width>291</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="lblCUDADeviceNameVideo">
+       <property name="geometry">
+        <rect>
+         <x>190</x>
+         <y>36</y>
+         <width>291</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tabTakePhoto">
+     <attribute name="title">
+      <string>Take photo</string>
+     </attribute>
+     <widget class="QGroupBox" name="groupOutputWebcam">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>0</y>
+        <width>1341</width>
+        <height>721</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Detect by Webcam/Camera</string>
+      </property>
+      <widget class="QGraphicsView" name="graphicsViewWebcam">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>60</y>
+         <width>1301</width>
+         <height>601</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="lblDisplayWebcam">
+       <property name="geometry">
+        <rect>
+         <x>22</x>
+         <y>61</y>
+         <width>47</width>
+         <height>13</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btnCapture">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>600</x>
+         <y>670</y>
+         <width>72</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Capture</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btnDetectTakePhoto">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>680</x>
+         <y>670</y>
+         <width>72</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Detect</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btnActiveWebcam">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>30</y>
+         <width>141</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Active Webcam/Camera</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btnDeactiveWebcam">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>170</x>
+         <y>30</y>
+         <width>141</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Deactive Webcam/Camera</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tabRealTime">
+     <attribute name="title">
+      <string>Real-time</string>
+     </attribute>
+     <widget class="QGroupBox" name="groupOutputRealtime">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>0</y>
+        <width>1341</width>
+        <height>721</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Detect by Webcam/Camera</string>
+      </property>
+      <widget class="QGraphicsView" name="graphicsViewRealtime">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>60</y>
+         <width>1301</width>
+         <height>641</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="lblDisplayRealtime">
+       <property name="geometry">
+        <rect>
+         <x>21</x>
+         <y>61</y>
+         <width>47</width>
+         <height>13</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btnActiveRealtime">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>30</y>
+         <width>141</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Active Webcam/Camera</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btnDeactiveRealtime">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>170</x>
+         <y>30</y>
+         <width>141</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Deactive Webcam/Camera</string>
+       </property>
+      </widget>
+      <zorder>graphicsViewRealtime</zorder>
+      <zorder>btnActiveRealtime</zorder>
+      <zorder>btnDeactiveRealtime</zorder>
+      <zorder>lblDisplayRealtime</zorder>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1366</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QVideoWidget</class>
+   <extends>QWidget</extends>
+   <header>PyQt5.QtMultimediaWidgets</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
